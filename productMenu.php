@@ -99,7 +99,12 @@
 
 						while($row = $result->fetch_array()):
 							$picDestination = "images/productImages/".$row['pimage'];
-							print_r($picDestination);
+
+
+							// echo "<pre>";		
+							// print_r($picDestination);
+
+
 						?>
 							<div class="col-md-4">
 							<section>
