@@ -94,15 +94,15 @@
 		<div class="footer-center">
 			<div>
 				<i class="fa fa-map-marker"></i>
-				<p style="font-size:20px">Agro Culture Fam<span>Vormir</span></p>
+				<p style="font-size:20px">Agro Culture Fam<span>TamilNadu</span></p>
 			</div>
 			<div>
 				<i class="fa fa-phone"></i>
-				<p style="font-size:20px">12	3456789</p>
+				<p style="font-size:20px"> +91  9385949881</p>
 			</div>
 			<div>
 				<i class="fa fa-envelope"></i>
-				<p style="font-size:20px"><a href="mailto:agroculture@gmail.com" style="color:white">demo@demo.com</a></p>
+				<p style="font-size:20px"><a href="mailto:agroculture@gmail.com" style="color:white">surya.adventure57@gmail.com</a></p>
 			</div>
 		</div>
 
