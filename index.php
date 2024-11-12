@@ -207,7 +207,7 @@
 			                            <input type="password" name="password" id="password" value="" placeholder="Password" required/>
 			                        </div>
 			                        <div class="3u 12u$(xsmall)">
-			                            <input type="password" name="pass" id="pass" value="" placeholder="Retype Password" required/>
+			                            <input class="retype_password" type="password" name="pass" id="pass" value="" placeholder="Retype Password" required/>
 			                        </div>
 								</div>
 								<div class="row uniform">
@@ -274,8 +274,9 @@ window.onclick = function(event) {
     function validatePasswords() {
         // Get password values
         var password = document.getElementById("password").value;
-        var confirmPassword = document.getElementById("pass").value;
-
+        var confirmPassword = document.getElementsByClassName("retype_password")[0].value;
+		// console.log(password);
+		// console.log(confirmPassword);
         // Check if both passwords match
         if (password !== confirmPassword) {
             alert("Passwords do not match!");
