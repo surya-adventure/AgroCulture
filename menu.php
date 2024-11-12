@@ -29,7 +29,16 @@
 						<li><a href="<?= $link; ?>"><span class="<?php echo $logo; ?>"></span><?php echo" ". $loginProfile; ?></a></li>
 						<li><a href="market.php"><span class="glyphicon glyphicon-grain"> Digital-Market</a></li>
 						<li><a href="blogView.php"><span class="glyphicon glyphicon-comment"> BLOG</a></li>
-						<li><a href="view_ordered_products.php"><span class="glyphicon glyphicon-cart">Orders</a></li>
+
+						<?php 
+						if(isset($_SESSION['logged_in']) AND $_SESSION['logged_in'] == 1){
+
+							echo "						 <li><a href='view_ordered_products.php'><span class='glyphicon glyphicon-cart'>Orders</a></li> 
+";
+
+						}
+						?>
+						<!-- <li><a href="view_ordered_products.php"><span class="glyphicon glyphicon-cart">Orders</a></li> -->
 					</ul>
 				</nav>
 			</header>

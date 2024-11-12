@@ -192,7 +192,10 @@
 								</div>
 								<div class="row uniform">
 									<div class="3u 12u$(xsmall)">
-										<input type="text" name="mobile" id="mobile" value="" placeholder="Mobile Number" required/>
+
+									<input type="text" name="mobile" id="mobile" value="" placeholder="Mobile Number" required 
+      										 pattern="[0-9]{10}" maxlength="10" title="Please enter a 10-digit mobile number"/>
+
 									</div>
 
 									<div class="3u 12u$(xsmall)">
@@ -227,7 +230,7 @@
 								</div>
 								<div class="row uniform">
 									<div class="3u 12u$(small)">
-										<input type="submit" value="Submit" name="submit" class="special" /></li>
+										<input onclick="return validatePasswords()" type="submit" value="Submit" name="submit" class="special" /></li>
 									</div>
 									<div class="3u 12u$(small)">
 										<input type="reset" value="Reset" name="reset"/></li>
@@ -266,6 +269,21 @@ window.onclick = function(event) {
 
 </script>
 
+
+<script>
+    function validatePasswords() {
+        // Get password values
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("pass").value;
+
+        // Check if both passwords match
+        if (password !== confirmPassword) {
+            alert("Passwords do not match!");
+            return false; // Prevent form submission
+        }
+        return true; // Allow form submission
+    }
+</script>
 
 	</body>
 </html>

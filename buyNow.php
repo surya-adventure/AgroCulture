@@ -81,7 +81,7 @@
                     </div>
                     <div class="row uniform">
                         <div class="6u 12u$(xsmall)">
-                            <input type="text" name="mobile" id="mobile" value="" placeholder="Mobile Number" required/>
+                            <input type="text" name="mobile" id="mobile" value="" placeholder="Mobile Number"  pattern="[0-9]{10}" maxlength="10" required/>
                         </div>
 
                         <div class="6u 12u$(xsmall)">
