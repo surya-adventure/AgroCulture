@@ -54,47 +54,55 @@ if($category == 1)
 
     	if (mysqli_query($conn, $sql))
     	{
-    	    $_SESSION['Active'] = 0;
-            $_SESSION['logged_in'] = true;
 
-            $_SESSION['picStatus'] = 0;
-           // $_SESSION['picExt'] = png;
+           // echo "<script>alert('Account created successfully. Please Login Again..')</script>";
 
-            $sql = "SELECT * FROM farmer WHERE fusername='$user'";
-            $result = mysqli_query($conn, $sql);
-            $User = $result->fetch_assoc();
-            $_SESSION['id'] = $User['fid'];
+           echo "<script>
+                    alert('Account created successfully. Please Login Again..');
+                    window.location.href = '../index.php';
+                </script>";
 
-            if($_SESSION['picStatus'] == 0)
-            {
-                $_SESSION['picId'] = 0;
-                $_SESSION['picName'] = "profile0.png";
-            }
-            else
-            {
-                $_SESSION['picId'] = $_SESSION['id'];
-                $_SESSION['picName'] = "profile".$_SESSION['picId'].".".$_SESSION['picExt'];
-            }
+    	//     $_SESSION['Active'] = 0;
+        //     $_SESSION['logged_in'] = true;
 
-            $_SESSION['message'] =
+        //     $_SESSION['picStatus'] = 0;
+        //    // $_SESSION['picExt'] = png;
 
-                     "Confirmation link has been sent to $email, please verify
-                     your account by clicking on the link in the message!";
+        //     $sql = "SELECT * FROM farmer WHERE fusername='$user'";
+        //     $result = mysqli_query($conn, $sql);
+        //     $User = $result->fetch_assoc();
+        //     $_SESSION['id'] = $User['fid'];
 
-            $to      = $email;
-            $subject = "Account Verification ( ArtCircle.com )";
-            $message_body = "
-            Hello '.$user.',
+        //     if($_SESSION['picStatus'] == 0)
+        //     {
+        //         $_SESSION['picId'] = 0;
+        //         $_SESSION['picName'] = "profile0.png";
+        //     }
+        //     else
+        //     {
+        //         $_SESSION['picId'] = $_SESSION['id'];
+        //         $_SESSION['picName'] = "profile".$_SESSION['picId'].".".$_SESSION['picExt'];
+        //     }
 
-            Thank you for signing up!
+            // $_SESSION['message'] =
 
-            Please click this link to activate your account:
+            //          "Confirmation link has been sent to $email, please verify
+            //          your account by clicking on the link in the message!";
 
-            http://localhost/AgroCulture/Login/verify.php?email=".$email."&hash=".$hash;
+            // $to      = $email;
+            // $subject = "Account Verification ( ArtCircle.com )";
+            // $message_body = "
+            // Hello '.$user.',
+
+            // Thank you for signing up!
+
+            // Please click this link to activate your account:
+
+            // http://localhost/AgroCulture/Login/verify.php?email=".$email."&hash=".$hash;
 
             //$check = mail( $to, $subject, $message_body );
 
-            header("location: profile.php");
+            //header("location: profile.php");
     	}
     	else
     	{
@@ -150,7 +158,7 @@ else
 
             //$check = mail( $to, $subject, $message_body );
 
-            header("location: profile.php");
+            //header("location: profile.php");
     	}
     	else
     	{
